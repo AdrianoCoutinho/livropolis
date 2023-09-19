@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 export default function BasicCard() {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: 275, textAlign: 'center', marginTop: '20px' }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Titulo
@@ -14,12 +14,12 @@ export default function BasicCard() {
         <Typography variant="h5" component="div">
           Autor
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        <Typography color="text.secondary">
           Ano
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Leia mais</Button>
+        <Button size="large">Leia mais</Button>
       </CardActions>
     </Card>
   );
