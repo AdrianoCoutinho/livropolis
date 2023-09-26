@@ -175,21 +175,23 @@ export default function RegisterDialog() {
           </DialogActions>
         </form>
       </Dialog>
-      {biblioteca.map((item) => {
-        return (
-          <Grid key={item.id} item xs={12} md={3} lg={3}>
-            <CardLivro
-              id={item.id}
-              titulo={item.titulo}
-              autor={item.autor}
-              ano={item.ano}
-              dataCadastro={item.dataCadastro}
-              genero={item.genero}
-              descricao={item.descricao}
-            />
-          </Grid>
-        );
-      })}
+      <Grid container spacing={1}>
+        {biblioteca.map((item) => {
+          return (
+            <Grid key={item.id} item xs={12} md={12} lg={12}>
+              <CardLivro
+                id={item.id}
+                titulo={item.titulo}
+                autor={item.autor}
+                ano={item.ano}
+                dataCadastro={item.dataCadastro}
+                genero={item.genero}
+                descricao={item.descricao}
+              />
+            </Grid>
+          );
+        })}
+      </Grid>
     </div>
   );
 }
